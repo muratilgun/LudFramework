@@ -1,0 +1,5 @@
+MOQ =>
+* UnitTestleri yaparken Temel kurallardan birisi diðer katmanlarla iletiþim kurmadan sadece o katmaný test ederiz.
+* Diðer Katmanlarla iletiþim kurarak yapýlan test entegrasyon testidir.
+* Örneðin ProductManager a ihtiyacým var bunun instancený almam gerekiyor. Fakat bunu newlerken IProductDal ister ve DataAccess katmanýyla iletiþim kurmuþ oluruz. Ýþte bunu yapay birþekilde sanki bir katmanla iletiþim halindeymiþ gibi MOQ sayesinde yaparýz
+** Business Katmanýnda ProductManager için Expected Validation Testini yaparken yapýyý kuruyoruz. Kuralara uygun olmaya bir product ekleyerek bir hata almayý bekliyoruz. Hata aldýðýmýz için testi baþarýlý bir þekilde sonuçlandýrýyoruz.

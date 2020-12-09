@@ -47,6 +47,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 	ProjectSection(SolutionItems) = preProject
 		AddAModelToEntityFramework.txt = AddAModelToEntityFramework.txt
 		CreateAComplexType.txt = CreateAComplexType.txt
+		WhatExactlyDoesTheMoqDo.txt = WhatExactlyDoesTheMoqDo.txt
 	EndProjectSection
 EndProject
 Global

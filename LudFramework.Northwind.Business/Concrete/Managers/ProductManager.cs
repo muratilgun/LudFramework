@@ -8,6 +8,7 @@ using LudFramework.Northwind.Business.Abstract;
 using LudFramework.Northwind.Business.ValidationRules.FluentValidation;
 using LudFramework.Northwind.DataAccess.Abstract;
 using LudFramework.Northwind.Entities.Concrete;
+using LudFramework.Core.Aspects.Postsharp;
 
 namespace LudFramework.Northwind.Business.Concrete.Managers
 {
@@ -30,13 +31,13 @@ namespace LudFramework.Northwind.Business.Concrete.Managers
             return _productDal.Get(p => p.ProductId == id);
         }
 
-        [FluentValidate(typeof(ProductValidator))]
+        [FluentValidationAspect(typeof(ProductValidator))]
         public Product Add(Product product)
         {
             return _productDal.Add(product);
         }
 
-        [FluentValidate(typeof(ProductValidator))]
+        [FluentValidationAspect(typeof(ProductValidator))]
         public Product Update(Product product)
         {
 

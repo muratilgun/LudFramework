@@ -24,9 +24,9 @@ namespace LudFramework.Northwind.Business.ValidationRules.FluentValidation
 
         }
 
-        private bool StartWithA(string arg)
-        {
-            return arg.StartsWith("A");
-        }
+        //private bool StartWithA(string arg)
+        //{
+        //    return arg.StartsWith("A");
+        //}
     }
 }
