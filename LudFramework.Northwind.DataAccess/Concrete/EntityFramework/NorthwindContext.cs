@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LudFramework.Northwind.DataAccess.Concrete.EntityFramework.Mappings;
 using LudFramework.Northwind.Entities.Concrete;
 
 namespace LudFramework.Northwind.DataAccess.Concrete.EntityFramework
@@ -15,6 +16,7 @@ namespace LudFramework.Northwind.DataAccess.Concrete.EntityFramework
             Database.SetInitializer<NorthwindContext>(null);
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -1,0 +1,16 @@
+Category Nesnesi Oluþturma.
+1. Entities Katmanýnda Concrete Klasörüne  Category adýnda bir  Class ekliyoruz. 
+1.1. Gerekli Propertyleri yazýyoruz.
+1.2. NHibernate olma olasýðýndan dolayý virtual olarak iþaretliyoruz.
+2. DataAccess katmanýnda Abstract klasörüne ICategoryDal adýnda bir interface oluþtururuz.
+2.1. IEntityRepository'i implemente edilir ve hangi entity ile çalýþacaðý eklenir.
+2.2. Daha sonra hangi teknoloji kullanýlýyorsa örneðin ben EntityFramework kullanacaðým ve ona ekleyeceðim. Concrete klasöründe EntityFramework klasörünün aldýnda Mapping klasörüne CategoryMap adýnda bir class oluþturup gerekli mapleme iþlemleri yapýlýr. 
+2.3.Daha sonra Context'e Category'nin Dbset i eklenir.
+2.4.Son olarak Bir EfCategoryDal classý oluþturulur. EfEntityRepositoryBase implemente edilir. Ve ICategoryDal'ý implemente eder.
+3. Ýstediðimiz CRUD iþlemlerini gerçekleþtirebiliriz.
+
+Not : Örnek olarak Ayný Categori'yi NHibernate için ekleme => 
+1.Entity hazýr virtual tanýmlanýþ. DataAccess katmanýnda SqlserverHelperýmýzda hazýr
+1.1. NHibernate için bir categorymap adýnda class oluþturuyoruz. Gerekli mapping iþlemlerini yapýyoruz.
+1.2. Daha sonra bir NhCategoryDal ekliyoruz. Ve buna NhEntityRepositoryBase implementesyonu yapýlýr. ve ICategoryDal ýn implementasyonu yapýlarak bunu child'ý olduðunu belirtiriz.
+
