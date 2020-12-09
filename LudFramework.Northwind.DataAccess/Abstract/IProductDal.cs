@@ -11,6 +11,8 @@ namespace LudFramework.Northwind.DataAccess.Abstract
 {
     public interface IProductDal:IEntityRepository<Product>
     {
+        
         List<ProductDetail> GetProductDetails();
+
     }
 }
