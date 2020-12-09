@@ -46,6 +46,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{73AFDD6B-E737-4332-B8F3-D9B076852E05}"
 	ProjectSection(SolutionItems) = preProject
 		AddAModelToEntityFramework.txt = AddAModelToEntityFramework.txt
+		CreateAComplexType.txt = CreateAComplexType.txt
 	EndProjectSection
 EndProject
 Global

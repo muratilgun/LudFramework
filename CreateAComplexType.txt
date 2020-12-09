@@ -1,0 +1,7 @@
+NOT => AutoMapper ve DTO kullanýmý !!!
+1.Complex type iki tablonun joinidir. Örneðin: ben Product ile Categoryi birleþtiriyorum. 
+1.1.  Entity katmanýnda, ComplexTypes klasörümüzün altýna, ProductDetail diye bir class oluþturup, ilgili propertyleri yazýyorum. 
+2. Bir join atacaðým için DataAccess katmanýnda Abstract klasörünün altýnda IProductDal interface'e bana productdetail listesi döndüren metot yazýyorum. List<ProductDetail> GetProductDetails();
+2.1. Bu iþlemi yaptýktan sonra, hem Efproductdal hem Nhproductdal ilgili metotun implementasyonunu ister.
+2.2. EfProductDal classýmýn içinde metotumu concrete ediyorum. 
+2.3. NhProductDal classýmýn içinde metoumu concrete ediyorum.
