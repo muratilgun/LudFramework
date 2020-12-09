@@ -10,7 +10,7 @@ namespace LudFramework.Northwind.DataAccess.Concrete.EntityFramework
 {
     public class NorthwindContext:DbContext
     {
-        protected NorthwindContext()
+        public NorthwindContext()
         {
             Database.SetInitializer<NorthwindContext>(null);
         }

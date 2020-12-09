@@ -10,7 +10,7 @@ using LudFramework.Northwind.Entities.Concrete;
 
 namespace LudFramework.Northwind.DataAccess.Concrete.EntityFramework
 {
-    public class EfProductDal: EfEntityRepositoryBase<Product,NorthwindContext>, IProductDal
+    public class EfProductDal : EfEntityRepositoryBase<Product, NorthwindContext>, IProductDal
     {
     }
 }
