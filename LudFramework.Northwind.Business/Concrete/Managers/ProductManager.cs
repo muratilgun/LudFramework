@@ -9,20 +9,30 @@ using LudFramework.Northwind.Business.ValidationRules.FluentValidation;
 using LudFramework.Northwind.DataAccess.Abstract;
 using LudFramework.Northwind.Entities.Concrete;
 using LudFramework.Core.Aspects.Postsharp;
+using LudFramework.Core.DataAccess;
+using System.Transactions;
+using LudFramework.Core.Aspects.Postsharp.TransactionAspects;
+using LudFramework.Core.Aspects.Postsharp.ValidationAspects;
+using LudFramework.Core.Aspects.Postsharp.CacheAspects;
+using LudFramework.Core.CrossCuttingConcerns.Caching.Microsoft;
 
 namespace LudFramework.Northwind.Business.Concrete.Managers
 {
-    public class ProductManager:IProductService
+    public class ProductManager : IProductService
     {
         private IProductDal _productDal;
+
 
         public ProductManager(IProductDal productDal)
         {
             _productDal = productDal;
+
         }
 
+        [CacheAspect(typeof(MemoryCacheManager))]
         public List<Product> GetAll()
         {
+
             return _productDal.GetList();
         }
 
@@ -32,6 +42,7 @@ namespace LudFramework.Northwind.Business.Concrete.Managers
         }
 
         [FluentValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect(typeof(MemoryCacheManager))]
         public Product Add(Product product)
         {
             return _productDal.Add(product);
@@ -42,6 +53,13 @@ namespace LudFramework.Northwind.Business.Concrete.Managers
         {
 
             return _productDal.Update(product);
+        }
+
+        [TransactionScopeAspect]
+        public void TransactionalOperation(Product product1, Product product2)
+        {
+            _productDal.Add(product1);
+            _productDal.Update(product2);
         }
     }
 }

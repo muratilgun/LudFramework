@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LudFramework.Core.Aspects.Postsharp
+namespace LudFramework.Core.Aspects.Postsharp.ValidationAspects
 {
     [Serializable]
-    public class FluentValidationAspect:OnMethodBoundaryAspect
+    public class FluentValidationAspect : OnMethodBoundaryAspect
     {
         Type _validatorTpye;
         public FluentValidationAspect(Type validatorType)

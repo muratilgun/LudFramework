@@ -1,0 +1,15 @@
+# Önbelleðe Alma Nedir?
+Önbelleðe almanýn teknolojisi ve kesin ayrýntýlarý oldukça karmaþýk olsa da, temelde yatan fikir gerçekten çok basittir. Bir örnek vereyim.
+
+Size 5 x 3'ün sonucunun ne olduðunu sorarsam, cevabýn 15 olduðunu anlarsýnýz. Bunu hesaplamanýza gerek yoktu, bu çarpmayý hayatýnýzda o kadar çok kez yaptýnýz ki artýk yapmanýza gerek kalmadý - herhangi bir zihinsel iþlem yapmak zorunda kalmadan sadece sonucu hatýrlarsýnýz . Önbelleðe alma bu þekilde çalýþýr.
+
+Web siteleri genellikle ayda yüzlerce, binlerce, hatta bazen milyonlarca kez görüntülenmektedir. Normalde, bir tarayýcý bir web sayfasýný her istediðinde, sunucunun bir dizi karmaþýk (ve zaman alan) hesaplama yapmasý gerekir. En son gönderileri alýr, üstbilgi ve altbilgiyi oluþturur, sitenizin kenar çubuðu widget'larýný bulur vb. Bununla birlikte, çoðu durumda, tüm bu hesaplamalarýn sonucu tam olarak ayný olacaktýr. Öyleyse, her bir isteði ayrý ayrý iþlemek yerine, sunucunun nihai sonucu hatýrlamasýný saðlasak harika olmaz mýydý? Önbelleðe alma tam olarak bunu yapar!
+
+# Önbelleðe Alýnmýþ Sayfalar Nasýl Sunulur
+Bir sayfanýn nasýl sunulduðuna bakarak önbelleðe alma sürecini anlamanýn en kolay yol olduðunu düþünüyorum. Önbelleðe alma özelliði etkinleþtirilmiþ bir blogunuz olduðunu varsayalým. Birisi ana sayfanýzý ilk kez ziyaret ettiðinde sayfayý normal þekilde alýr: Ýstek alýnýr, sunucuda iþlenir ve ortaya çýkan web sayfasý bir HTML dosyasýna dönüþtürülerek ziyaretçinin web tarayýcýsýna gönderilir.
+
+Önbelleðe alma açýk olduðundan, sunucu bu HTML dosyasýný - genellikle son derece hýzlý olan 'rasgele eriþim belleði' (veya RAM) içinde depolar. Bir dahaki sefere siz veya baþka biri ana sayfayý görüntülediðinde, sunucunun iþlemeyi ve HTML'ye dönüþtürmeyi yapmasý gerekmez. Bunun yerine, önceden hazýrlanmýþ HTML dosyasýný tarayýcýya gönderir.
+
+OutPut Caching => 
+
+Eðer ki bir data parametreleriyle beraber cachlerinse, ayný parametrelerle ayný data çaðýrýldýðýnda tekrardan cach yapýlýr.
